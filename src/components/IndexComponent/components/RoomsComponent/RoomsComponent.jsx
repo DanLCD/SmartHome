@@ -4,7 +4,7 @@ import { RoomBox } from './RoomBox';
 import { connect } from 'react-redux';
 import { store } from '../../../store';
 import styles from './RoomsComponentStyle';
-import {normalaizeValue} from '../../../../services/CommonFunctions';
+import {normalaizeValue} from '../../../../src/services/CommonFunctions';
 
 
 class RoomsComponent extends Component {

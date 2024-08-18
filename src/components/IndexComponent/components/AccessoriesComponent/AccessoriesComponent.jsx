@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { merge } from 'lodash';
 import styles , {styleActive} from './AccessoriesComponentStyle';
-import {normalaizeValue} from '../../../../services/CommonFunctions';
+import {normalaizeValue} from '../../../../src/services/CommonFunctions';
 
 export class AccessoriesComponent extends Component {
 
