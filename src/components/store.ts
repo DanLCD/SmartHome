@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { reducers } from './reducers';
 import { connect, ConnectedProps, createDispatchHook, createSelectorHook, createStoreHook, ReactReduxContextValue } from 'react-redux';
-import { AccessoryPayload } from './mocks/RoomAccessoriesMock';
-import { PlacePayload } from './PlacesComponent/PlacesComponent';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
+import PlacePayload from '@/types/payloads/PlacePayload';
 import { createContext } from 'react';
 import { AnyAction } from 'redux';
 

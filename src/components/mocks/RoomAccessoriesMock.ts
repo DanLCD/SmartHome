@@ -1,6 +1,5 @@
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 import { sample, random, times } from 'lodash';
-
-export type AccessoryPayload = { key: number, name: string, place: number, value: any, type: { key: string }, isactive: boolean};
 
 export let mockAccessories = times(10, () => {
     return mockGenerator();

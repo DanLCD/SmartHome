@@ -4,8 +4,8 @@ import { AccessoriesComponent } from '../AccessoriesComponent/AccessoriesCompone
 import { store, connector } from '../../../store';
 import styles from './RoomAccessoriesComponentStyle';
 import EmptyComponent from '../EmptyComponent/EmptyComponent';
-import { AccessoryPayload } from '@/components/mocks/RoomAccessoriesMock';
-import { PlacePayload } from '@/components/PlacesComponent/PlacesComponent';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
+import PlacePayload from '@/types/payloads/PlacePayload';
 import { useTranslation } from 'react-i18next';
 
 type Props = {places: PlacePayload[], accessories: AccessoryPayload[]};
@@ -24,18 +24,17 @@ class RoomAccessoriesComponent extends Component<Props> {
         const { places } = this.props;
         const currentPlace = places.find(place => place.isactive);
         return currentPlace ? this.props.accessories
-            .filter(x => x.place == currentPlace.key) : [];
+            .filter(accessory => accessory.place == currentPlace.key) : [];
     }
 
     accessoriesElements(): ReactNode[] {
-        const { accessories } = this.props;
-        return this.accessories().map((x: AccessoryPayload, index: number) => (
+        return this.accessories().map((accessory: AccessoryPayload, index: number) => (
             <AccessoriesComponent
                 key={index}
-                value={x.value}
-                name={x.name}
-                onPress={() => this.accessoryChange(x)}
-                isactive={x.isactive} />
+                value={accessory.value}
+                name={accessory.name}
+                onPress={() => this.accessoryChange(accessory)}
+                isactive={accessory.isactive} />
         )) as ReactNode[];
     }
 

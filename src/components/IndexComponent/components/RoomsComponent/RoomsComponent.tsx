@@ -4,8 +4,8 @@ import RoomBox from './RoomBox';
 import { store, connector } from '../../../store';
 import styles from './RoomsComponentStyle';
 import { normalizeValue } from '../../../../services/commons';
-import { PlacePayload } from '@/components/PlacesComponent/PlacesComponent';
-import { AccessoryPayload } from '@/components/mocks/RoomAccessoriesMock';
+import PlacePayload from '@/types/payloads/PlacePayload';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
 type Props = {
     places: PlacePayload[],
@@ -19,11 +19,11 @@ class RoomsComponent extends Component<Props> {
     }
 
     previewRoomStatus(room: PlacePayload, accessories: AccessoryPayload[]) {
-        return accessories.filter(x => x.place === room.key).map(x => `${x.name} is ${normalizeValue(x.value)}`);
+        return accessories.filter(accessory => accessory.place === room.key).map(accessory => `${accessory.name} is ${normalizeValue(accessory.value)}`);
     }
 
     countAccessoriesInRoom(room: PlacePayload, accessories: AccessoryPayload[]) {
-        return accessories.reduce((count, x) => x.place === room.key ? count + 1 : count, 0);
+        return accessories.reduce((count, accessory) => accessory.place === room.key ? count + 1 : count, 0);
     }
 
     render() {

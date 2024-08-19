@@ -4,23 +4,17 @@ import { store, connector } from '../../../store';
 import styles from './ControlsComponentStyle';
 import TemperatureComponent from '../TemperatureComponent/TemperatureComponent';
 import SingleBridgeComponent from '../SingleBridgeComponent/SingleBridgeComponent';
-import { AccessoryPayload } from '@/components/mocks/RoomAccessoriesMock';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
 type Props = { accessories: AccessoryPayload[] };
 
 class ControlsComponent extends Component<Props> {
-
-    /**
-     * Passing this function to each component, and they will call this function,
-     * to update the store with new values.
-     */
     updateValue(accessory: AccessoryPayload, value: any) {
-        accessory.value = value;
         store.dispatch({ type: "UPDATE_ACCESSORY_VALUE", accessory, value })
     }
 
     render() {
-        const findActiveControl = () => this.props.accessories.find(x => x.isactive);
+        const findActiveControl = () => this.props.accessories.find(accessory => accessory.isactive);
         const getControl = () => {
             const accessory = findActiveControl();
             if (!accessory) return null;

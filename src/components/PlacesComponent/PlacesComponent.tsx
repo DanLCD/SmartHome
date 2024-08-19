@@ -3,17 +3,7 @@ import { View, FlatList } from 'react-native';
 import PlaceRow from './PlaceRow';
 import { times, sample, random } from 'lodash';
 import { connector } from '../store';
-
-export type PlacePayload = {
-    key: number,
-    name: string,
-    image: any,
-    temperature: string[],
-    inputs: number,
-    outputs: number,
-    isactive: boolean,
-    icon?: string
-}
+import PlacePayload from '@/types/payloads/PlacePayload';
 
 class PlacesComponent extends Component {
     places(): PlacePayload[] {
@@ -47,7 +37,7 @@ class PlacesComponent extends Component {
             isactive: true
         });
 
-        return times(5, (time: number) => place()).map((x: PlacePayload, index: number) => { x.key = index; return x; });
+        return times(5, (time: number) => place()).map((place: PlacePayload, index: number) => { place.key = index; return place; });
     }
 
     render() {

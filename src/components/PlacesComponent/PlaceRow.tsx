@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableHighlight } from 'react-native';
-import { PlacePayload } from './PlacesComponent';
+import PlacePayload from '@/types/payloads/PlacePayload';
 
 type Props = { place: PlacePayload };
 

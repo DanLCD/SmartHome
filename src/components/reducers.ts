@@ -1,8 +1,8 @@
 import { AnyAction, combineReducers } from 'redux';
-import { PlacePayload } from './PlacesComponent/PlacesComponent';
-import { AccessoryPayload } from './mocks/RoomAccessoriesMock';
 import { StoreProps } from './store';
 import { Reducer } from '@reduxjs/toolkit';
+import PlacePayload from '@/types/payloads/PlacePayload';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
 export function placesReducer(places: PlacePayload[] = [], action: AnyAction) {
     switch (action.type) {
@@ -25,12 +25,12 @@ export function accessoriesReducer(accessories: AccessoryPayload[] = [], action:
         case 'UPDATE_ACCESSORY_VALUE':
             return accessories.map(accessory => {
                 if (accessory.key === action.accessory.key) {
-                    return {...accessory, value: action.accessory.value}
+                    return {...accessory, value: action.value}
                 }
                 return accessory;
             });
         case 'RESET_ACCESSORY':
-            return accessories.map(x => ({...x, isactive: false}));
+            return accessories.map(accessory => ({...accessory, isactive: false}));
         case 'UPDATE_ACCESSORY':
             return accessories.concat(action.accessory);
         case 'ACTIVATE_ACCESSORY':

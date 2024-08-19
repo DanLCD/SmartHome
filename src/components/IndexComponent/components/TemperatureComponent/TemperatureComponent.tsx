@@ -2,7 +2,7 @@ import React from 'react';
 import { ViewStyle, View, Text } from 'react-native';
 import style from './TemperatureComponentStyle';
 import Slider from '@react-native-assets/slider';
-import { AccessoryPayload } from '@/components/mocks/RoomAccessoriesMock';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 import { useTranslation } from 'react-i18next';
 
 var customStyles2 = {
@@ -30,9 +30,7 @@ const TemperatureAdjustComponent = ({ accessory, updateValue }: Props) => {
     return (
         <View style={style.container}>
             <Text style={style.text}>{t('home:temperature-title')}</Text>
-            <Text style={style.temperature}>
-                {accessory.value}
-            </Text>
+            <Text style={style.temperature}>{accessory.value}</Text>
             <Slider
                 minimumValue={10}
                 step={0.5}
@@ -40,9 +38,8 @@ const TemperatureAdjustComponent = ({ accessory, updateValue }: Props) => {
                 maximumValue={60}
                 trackStyle={customStyles2.track}
                 thumbStyle={customStyles2.thumb}
-                onValueChange={(value) => {
-                    updateValue(accessory, value)
-                }} />
+                onValueChange={value => updateValue(accessory, value)}
+            />
         </View>
     );
 }

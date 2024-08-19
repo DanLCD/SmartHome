@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import icons from './RoomIcons';
 import style, { activeStyles } from './RoomsComponentStyle';
-import { PlacePayload } from '@/components/PlacesComponent/PlacesComponent';
+import PlacePayload from '@/types/payloads/PlacePayload';
 import { useTranslation } from 'react-i18next';
 
 type Props = {

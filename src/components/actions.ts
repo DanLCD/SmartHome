@@ -3,10 +3,10 @@ import { mockAccessories } from './mocks/RoomAccessoriesMock';
 import { store } from './store';
 
 export function getPlaces () {   
-    mockRooms.map((room, index) => {
+    mockRooms.map((place, index) => {
         store.dispatch({
             type: 'UPDATE_PLACE',
-            place: Object.assign(room, {key: index})
+            place: Object.assign(place, {key: index})
         });
     });
 }

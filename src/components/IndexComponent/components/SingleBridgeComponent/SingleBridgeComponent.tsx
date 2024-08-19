@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, Switch, Image } from 'react-native';
 import style from './SingleBridgeComponentStyle';
-import { AccessoryPayload } from '@/components/mocks/RoomAccessoriesMock';
+import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
-export default function SingleBridgeComponent({ accessory, updateValue }: {accessory: AccessoryPayload, updateValue: (accessory: AccessoryPayload, value: any) => void}) {
+type Props = {accessory: AccessoryPayload, updateValue: (accessory: AccessoryPayload, value: any) => void};
+
+export default function SingleBridgeComponent({ accessory, updateValue }: Props) {
     return (
         <View style={style.container}>
             <Text style={style.text}>{accessory.name}</Text>
@@ -15,8 +17,9 @@ export default function SingleBridgeComponent({ accessory, updateValue }: {acces
                 <View style={{ flex: 1, paddingRight: 30 }}>
                     <Switch
                         style={style.switch}
-                        onValueChange={(value) => updateValue(accessory, value)}
+                        onValueChange={value => updateValue(accessory, value)}
                         value={accessory.value} />
+                    <Text>{accessory.value}</Text>
                 </View>
             </View>
         </View>
