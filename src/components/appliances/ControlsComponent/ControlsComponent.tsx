@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { store, connector } from '../../../store';
+import { store, connector } from '@/services/store';
 import styles from './ControlsComponentStyle';
-import TemperatureComponent from '../TemperatureComponent/TemperatureComponent';
-import SingleBridgeComponent from '../SingleBridgeComponent/SingleBridgeComponent';
+import TemperatureComponent from '@/components/appliances/TemperatureComponent/TemperatureComponent';
+import SingleBridgeComponent from '@/components/appliances/SingleBridgeComponent/SingleBridgeComponent';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
 type Props = { accessories: AccessoryPayload[] };

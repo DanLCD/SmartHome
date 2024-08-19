@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { merge } from 'lodash';
 import styles, { styleActive } from './AccessoriesComponentStyle';
-import { normalizeValue } from '../../../../services/commons';
+import { normalizeValue } from '../../../services/commons';
 
 type Props = {
     onPress: () => void,

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, FlatList } from 'react-native';
-import PlaceRow from './PlaceRow';
+import PlaceRow from '@/components/PlaceRow/PlaceRow';
 import { times, sample, random } from 'lodash';
-import { connector } from '../store';
+import { connector } from '../../services/store';
 import PlacePayload from '@/types/payloads/PlacePayload';
 
-class PlacesComponent extends Component {
+class Places extends Component {
     places(): PlacePayload[] {
         let getImage = () => {
             const list = [
@@ -54,4 +54,4 @@ class PlacesComponent extends Component {
     }
 }
 
-export default connector(PlacesComponent);
+export default connector(Places);

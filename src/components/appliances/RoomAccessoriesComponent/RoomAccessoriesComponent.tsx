@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import { AccessoriesComponent } from '../AccessoriesComponent/AccessoriesComponent';
-import { store, connector } from '../../../store';
+import { store, connector } from '../../../services/store';
 import styles from './RoomAccessoriesComponentStyle';
 import EmptyComponent from '../EmptyComponent/EmptyComponent';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';

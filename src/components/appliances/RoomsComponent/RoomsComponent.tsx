@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import RoomBox from './RoomBox';
-import { store, connector } from '../../../store';
+import { store, connector } from '../../../services/store';
 import styles from './RoomsComponentStyle';
-import { normalizeValue } from '../../../../services/commons';
+import { normalizeValue } from '../../../services/commons';
 import PlacePayload from '@/types/payloads/PlacePayload';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 

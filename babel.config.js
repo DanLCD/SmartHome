@@ -8,12 +8,12 @@ module.exports = {
 				root: ['./src'],
 				extensions: ['.js', '.json'],
 				alias: {
-					'@': './src',
+					'@': './src'
 				},
 			},
 		],
 		['@babel/plugin-proposal-decorators', { legacy: true }],
 		'inline-dotenv',
 		'react-native-reanimated/plugin', // needs to be last
-	],
+	]
 };

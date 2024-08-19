@@ -1,5 +1,5 @@
 import { AnyAction, combineReducers } from 'redux';
-import { StoreProps } from './store';
+import { StoreProps } from '@/services/store';
 import { Reducer } from '@reduxjs/toolkit';
 import PlacePayload from '@/types/payloads/PlacePayload';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
