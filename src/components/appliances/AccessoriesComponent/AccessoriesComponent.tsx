@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { merge } from 'lodash';
 import styles, { styleActive } from './AccessoriesComponentStyle';
-import { normalizeValue } from '../../../services/commons';
+import { normalizeValue } from '@/services/commons';
 
 type Props = {
     onPress: () => void,
@@ -11,7 +11,7 @@ type Props = {
     name: string
 };
 
-export const AccessoriesComponent = ({ isactive, onPress, value, name }: Props) => {
+export default ({ isactive, onPress, value, name }: Props) => {
     let style = isactive ? merge({}, styles, styleActive) : styles;
     return (
         <TouchableOpacity onPress={() => onPress()}>

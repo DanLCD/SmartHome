@@ -25,7 +25,7 @@ type Props = {
     updateValue: (accessory: AccessoryPayload, value: any) => void
 };
 
-const TemperatureAdjustComponent = ({ accessory, updateValue }: Props) => {
+export default ({ accessory, updateValue }: Props) => {
     const { t } = useTranslation(['home']);
     return (
         <View style={style.container}>
@@ -42,6 +42,4 @@ const TemperatureAdjustComponent = ({ accessory, updateValue }: Props) => {
             />
         </View>
     );
-}
-
-export default TemperatureAdjustComponent;
+};

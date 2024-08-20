@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import RoomBox from './RoomBox';
-import { store, connector } from '../../../services/store';
+import { store, connector, StoreProps } from '@/services/store';
 import styles from './RoomsComponentStyle';
-import { normalizeValue } from '../../../services/commons';
+import { normalizeValue } from '@/services/commons';
 import PlacePayload from '@/types/payloads/PlacePayload';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
-type Props = {
-    places: PlacePayload[],
-    accessories: AccessoryPayload[]
-};
-
-class RoomsComponent extends Component<Props> {
+class RoomsComponent extends Component<StoreProps> {
     activateRoom(place: PlacePayload) {
         store.dispatch({ type: 'ACTIVATE_PLACE', place });
         store.dispatch({ type: 'RESET_ACCESSORY' });

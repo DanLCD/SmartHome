@@ -1,21 +1,18 @@
 import React, { Component, ReactNode } from 'react';
 import { ScrollView, View, Text } from 'react-native';
-import { AccessoriesComponent } from '../AccessoriesComponent/AccessoriesComponent';
-import { store, connector } from '../../../services/store';
+import AccessoriesComponent from '@/components/appliances/AccessoriesComponent/AccessoriesComponent';
+import { store, connector, StoreProps } from '@/services/store';
 import styles from './RoomAccessoriesComponentStyle';
-import EmptyComponent from '../EmptyComponent/EmptyComponent';
+import EmptyComponent from '@/components/appliances/EmptyComponent/EmptyComponent';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
-import PlacePayload from '@/types/payloads/PlacePayload';
 import { useTranslation } from 'react-i18next';
-
-type Props = {places: PlacePayload[], accessories: AccessoryPayload[]};
 
 const RoomAccessoriesTitle = () => {
     const { t } = useTranslation(['home']);
     return (<Text style={styles.text}>{t('home:room-accessories-title')}</Text>);
 }
 
-class RoomAccessoriesComponent extends Component<Props> {
+class RoomAccessoriesComponent extends Component<StoreProps> {
     accessoryChange(accessory: AccessoryPayload) {
         store.dispatch({ type: 'ACTIVATE_ACCESSORY', accessory })
     }
@@ -53,7 +50,7 @@ class RoomAccessoriesComponent extends Component<Props> {
 
         return (
             <View style={styles.container}>
-                {this.accessories().length === 0 ? <EmptyComponent /> : accessoriesView}
+                {this.accessories().length === 0 ? <EmptyComponent status={this.props.device == null ? 'DISCONNECTED' : (this.props.device.connected ? 'CONNECTED' : 'CONNECTING')} /> : accessoriesView}
             </View>
         )
     }

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { store, connector } from '@/services/store';
+import { store, connector, StoreProps } from '@/services/store';
 import styles from './ControlsComponentStyle';
 import TemperatureComponent from '@/components/appliances/TemperatureComponent/TemperatureComponent';
 import SingleBridgeComponent from '@/components/appliances/SingleBridgeComponent/SingleBridgeComponent';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
+import { updateCharacteristic } from '@/services/net';
 
-type Props = { accessories: AccessoryPayload[] };
-
-class ControlsComponent extends Component<Props> {
+class ControlsComponent extends Component<StoreProps> {
     updateValue(accessory: AccessoryPayload, value: any) {
+        updateCharacteristic(accessory.key, value);
         store.dispatch({ type: "UPDATE_ACCESSORY_VALUE", accessory, value })
     }
 

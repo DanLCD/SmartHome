@@ -2,6 +2,10 @@
     "temperature-title": "AC Bedroom",
     "empty-title": "This room is vacant!",
     "empty-description": "Please login into your dashboard admin, and assign some widgets ( accessories ) into this place, then you can control them from here.",
+    "disconnected-title": "Server is offline",
+    "disconnected-description": "Make sure you are within range and that Bluetooth is on. If the issue keeps persisting... best of luck.",
+    "connecting-title": "Server found",
+    "connecting-description": "Hang on tight while a connection is established...",
     "room-accessories-title": "Room Accessories",
     "error": "Something went wrong."
 }

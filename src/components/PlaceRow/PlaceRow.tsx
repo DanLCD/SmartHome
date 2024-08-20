@@ -4,7 +4,7 @@ import PlacePayload from '@/types/payloads/PlacePayload';
 
 type Props = { place: PlacePayload };
 
-const PlaceRow = ({ place }: Props = { place: {} as PlacePayload }) => {
+export default ({ place }: Props = { place: {} as PlacePayload }) => {
     let styles = StyleSheet.create({
         image: {
             width: 90,
@@ -41,6 +41,4 @@ const PlaceRow = ({ place }: Props = { place: {} as PlacePayload }) => {
     );
 
 
-}
-
-export default PlaceRow;
+};

@@ -12,7 +12,7 @@ type Props = {
     onPress: () => void
 };
 
-const RoomBox = ({ room, roomStatus, onPress }: Props) => {
+export default ({ room, roomStatus, onPress }: Props) => {
     const { t } = useTranslation(['home']);
 
     const defaultIcon = require('./images/bed-active.png');
@@ -32,6 +32,4 @@ const RoomBox = ({ room, roomStatus, onPress }: Props) => {
             </View>
         </TouchableOpacity>
     );
-}
-
-export default RoomBox;
+};

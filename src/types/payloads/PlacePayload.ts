@@ -1,5 +1,5 @@
 type PlacePayload = {
-    key: number,
+    key: string,
     name: string,
     image: any,
     temperature: string[],

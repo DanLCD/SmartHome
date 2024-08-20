@@ -5,8 +5,9 @@ import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 import PlacePayload from '@/types/payloads/PlacePayload';
 import { createContext } from 'react';
 import { AnyAction } from 'redux';
+import DevicePayload from '@/types/payloads/DevicePayload';
 
-export type StoreProps = { accessories: AccessoryPayload[], places: PlacePayload[] };
+export type StoreProps = { accessories: AccessoryPayload[], places: PlacePayload[], device: DevicePayload | null };
 
 export const store = configureStore<StoreProps>({ reducer: reducers });
 export type RootState = ReturnType<typeof store.getState>;
@@ -22,5 +23,6 @@ export const useSelector = createSelectorHook(StoreContext);
 
 export const connector = connect((state: RootState) => ({
     accessories: state.accessories,
-    places: state.places
+    places: state.places,
+    device: state.device
 }), null, null, { context: StoreContext });
