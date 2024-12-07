@@ -1504,65 +1504,45 @@
     react-dom ">=16.13.1"
     react-native-web ">=0.13.4"
 
-"@react-native-community/cli-clean@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-clean/-/cli-clean-16.0.0.tgz#39ab764068b20bab0da64d9e7dfc6837d5a3f6da"
-  integrity sha512-lLwQUAJVcuktJG+65SckXnPCAFOHXeeI3c+avIVD42K2k2ue4Xro6CGLN42Nub+L7hXYXCtwtcKgBGJPKq25bQ==
+"@react-native-community/cli-clean@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-clean/-/cli-clean-15.0.0.tgz#10c7cfde8379aaa7a60eaf4bd3920542d4af1b81"
+  integrity sha512-ndwVj77eYivHTRmwRBmiAhQq0nC012PDr9cqRQ5QUQl9xr9gXlyO26oWA9jJbXNydXf5DHsVqqDVvh97fERsbg==
   dependencies:
-    "@react-native-community/cli-tools" "16.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
     chalk "^4.1.2"
     execa "^5.0.0"
     fast-glob "^3.3.2"
 
-"@react-native-community/cli-config-android@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-config-android/-/cli-config-android-16.0.0.tgz#4a0891bf0a78c2c6bafed986d719974751387fae"
-  integrity sha512-M8o99bs+ccveQlQjPj79PZ8Mc0A+8A9xdQwgMrDsMccs3MTF0gFYG6kZ0NlMONFrh3J0iDHQgKDx6K0YqrbGJQ==
+"@react-native-community/cli-config@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-config/-/cli-config-15.0.0.tgz#c49b1f6b0cc374175a827467bbaf3cee9e9f4ceb"
+  integrity sha512-YwmQ9Q7JerwqYg0kMD+jwPer1x2ajPR7bjxkOzykfLK4AZxEZo+KgpkSTILMvdqW0WyaXwuYFsgtPa/YVaOn0A==
   dependencies:
-    "@react-native-community/cli-tools" "16.0.0"
-    chalk "^4.1.2"
-    fast-glob "^3.3.2"
-    fast-xml-parser "^4.4.1"
-
-"@react-native-community/cli-config-apple@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-config-apple/-/cli-config-apple-16.0.0.tgz#d22acb06ee330e333d0620ed7b227ec0e8f57c47"
-  integrity sha512-d60xwPvsa+alLUyjhxoR1X7+o2Lb4UuKHZ6Lb6yKBe4nKkgU1sWAoyz/dApTJza15da3Kf8jzPQeE020VNt4ag==
-  dependencies:
-    "@react-native-community/cli-tools" "16.0.0"
-    chalk "^4.1.2"
-    execa "^5.0.0"
-    fast-glob "^3.3.2"
-
-"@react-native-community/cli-config@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-config/-/cli-config-16.0.0.tgz#5589f4ce6dd64357086ad2a1c0950d47eccf04f2"
-  integrity sha512-Kr4DcrWAOJTe0ii3/u9Wn0YZsAC/PReUmgp56QltvZodOhJK/N+fvovYc9bmCRpZRGLm+Ps3Pc90P1pCM585UQ==
-  dependencies:
-    "@react-native-community/cli-tools" "16.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
     chalk "^4.1.2"
     cosmiconfig "^9.0.0"
     deepmerge "^4.3.0"
     fast-glob "^3.3.2"
     joi "^17.2.1"
 
-"@react-native-community/cli-debugger-ui@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-16.0.0.tgz#9b7492ec9549b450a24cb1b5b164f4973a5f08c7"
-  integrity sha512-MPt9udyB/RhBmCG4jKDdKF8z3vjOXTPUWEv3K5BSPs6HjBF2oVTXVpP5V4sXhQglHFQOVvTSJzN1bybr3RUYeQ==
+"@react-native-community/cli-debugger-ui@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-15.0.0.tgz#b4186b419bebd513a1f5ba1e2324bc999003a2ec"
+  integrity sha512-S5A3QZv0ujP/TXZ+1lrlvRfetwuAvrSMJiBEcMh5pzObpr4Ura3naU6bh/ue+QFn9qJtNxoapC2c79B9Ngns/w==
   dependencies:
     serve-static "^1.13.1"
 
-"@react-native-community/cli-doctor@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-doctor/-/cli-doctor-16.0.0.tgz#2c0d09bed2464bb77d3df2a246aa6463f69b5328"
-  integrity sha512-gIpr3G1UWDmhZ4ttr0pSZuXP0YWNtYRuc8ORwuuMfKPu6LNv/HFe4bI8JKh1nDHKuEdYMYwFbyXaEhTGvhNUBg==
+"@react-native-community/cli-doctor@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-doctor/-/cli-doctor-15.0.0.tgz#aeaa90574048f9335aa6495dc5f7641ab3a1af58"
+  integrity sha512-UEavoARx1VRxZrNiiVWseP/6dBbP/qAJ9q7S4qf7iT6wstssxi+XCBwoONCQp5IIRJ8LAwKkxCksBuhoMDGzQg==
   dependencies:
-    "@react-native-community/cli-config" "16.0.0"
-    "@react-native-community/cli-platform-android" "16.0.0"
-    "@react-native-community/cli-platform-apple" "16.0.0"
-    "@react-native-community/cli-platform-ios" "16.0.0"
-    "@react-native-community/cli-tools" "16.0.0"
+    "@react-native-community/cli-config" "15.0.0"
+    "@react-native-community/cli-platform-android" "15.0.0"
+    "@react-native-community/cli-platform-apple" "15.0.0"
+    "@react-native-community/cli-platform-ios" "15.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
     chalk "^4.1.2"
     command-exists "^1.2.8"
     deepmerge "^4.3.0"
@@ -1575,42 +1555,44 @@
     wcwidth "^1.0.1"
     yaml "^2.2.1"
 
-"@react-native-community/cli-platform-android@16.0.0", "@react-native-community/cli-platform-android@^16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-android/-/cli-platform-android-16.0.0.tgz#c94c0e2b214ba07a33034349046c73f81168ff34"
-  integrity sha512-W7nAfUNkA2qvpeeEbNoExrgda/U7nNLJxl2Bb4G1VZ8dWawQNkW6/0YQ4RzNHZJchqNYKD93XrgKhZNw4fwNBg==
+"@react-native-community/cli-platform-android@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-android/-/cli-platform-android-15.0.0.tgz#d668ee89f559eeeab9eb437ae913710ea955db79"
+  integrity sha512-YQB48ulIdXqe/hEzPmVe5EU13AIQj/PNGZJSqHGoFs4wQYL4jR04iQ7wxIQSuw11TGZO3ne9rG4/rHt+3imE6Q==
   dependencies:
-    "@react-native-community/cli-config-android" "16.0.0"
-    "@react-native-community/cli-tools" "16.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
     chalk "^4.1.2"
     execa "^5.0.0"
+    fast-glob "^3.3.2"
+    fast-xml-parser "^4.4.1"
     logkitty "^0.7.1"
 
-"@react-native-community/cli-platform-apple@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-apple/-/cli-platform-apple-16.0.0.tgz#0e271c1fddb85c7aa840d8afce6956c038b12713"
-  integrity sha512-nMY5jV9d0bpOumpmUGqIu4ECI/b1hZFmOOpdhgMf5hyV8pSS7MN/gBCzrT4CfQ6wFRQeikcTWqNBW5oZwVvFnA==
+"@react-native-community/cli-platform-apple@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-apple/-/cli-platform-apple-15.0.0.tgz#2111ab9a55ba8cf212c505a9b78845ebb46318a3"
+  integrity sha512-DUC4AL3AGNjUDkTrK71fBz2B/aloJm+NHc5deTfEicRvDkyHDM16RqkuFwcvrzaKOtnMDwuDNPM7/PSEp8tbVg==
   dependencies:
-    "@react-native-community/cli-config-apple" "16.0.0"
-    "@react-native-community/cli-tools" "16.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
     chalk "^4.1.2"
     execa "^5.0.0"
+    fast-glob "^3.3.2"
     fast-xml-parser "^4.4.1"
+    ora "^5.4.1"
 
-"@react-native-community/cli-platform-ios@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-ios/-/cli-platform-ios-16.0.0.tgz#8c163b60f148e67fb75b31df0c29fa5441eae320"
-  integrity sha512-EcLkWeS3dJ/Ghk6Hrirgyfr1m6i6hmXaZw4pugHgDlMOHI5r4PUPWbiQftJlxsFgxw9+CZ0cHurHxstu2vCylQ==
+"@react-native-community/cli-platform-ios@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-platform-ios/-/cli-platform-ios-15.0.0.tgz#58b2467006a13be939bc7fb1bf7a0bcdb2b63663"
+  integrity sha512-2tP9R0tDIEA55ebNoVZFs0fQgz2nrnMy/epmsUrNC2p4+ZmPQEojqjB+OFaZV4Mh0svks+WoPqf9blk39kN7eg==
   dependencies:
-    "@react-native-community/cli-platform-apple" "16.0.0"
+    "@react-native-community/cli-platform-apple" "15.0.0"
 
-"@react-native-community/cli-server-api@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-server-api/-/cli-server-api-16.0.0.tgz#28bf6b2c77b45a3b451b1e58ee9995d1ad9cb2a3"
-  integrity sha512-AmI85hBXVetM2pQLyyQO9YncWQ1G1wlZ+vdlMF1FZJfM0IWDUbAeXafwyNT3kHwBOesOXawmI1bOI7IEPfLvqg==
+"@react-native-community/cli-server-api@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-server-api/-/cli-server-api-15.0.0.tgz#07240d25de556d859b1b78e7b9b4583c86855eca"
+  integrity sha512-ypq/5SghbuSaOFVaC+TGAlYCp5hTN0mZ6zBheBzD3OTWXhTu9UCBGCjubmBPLastXr0E6G0djTy4xZ5rwCrHWw==
   dependencies:
-    "@react-native-community/cli-debugger-ui" "16.0.0"
-    "@react-native-community/cli-tools" "16.0.0"
+    "@react-native-community/cli-debugger-ui" "15.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
     compression "^1.7.1"
     connect "^3.6.5"
     errorhandler "^1.5.1"
@@ -1619,10 +1601,10 @@
     serve-static "^1.13.1"
     ws "^6.2.3"
 
-"@react-native-community/cli-tools@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-tools/-/cli-tools-16.0.0.tgz#5e0e092fec5651ddcb0652152a94dd22ca95d99a"
-  integrity sha512-vFVFLjiAHZqbutd16+TV79Y9LIfjkaIoP62KPvQ9j25mqv9jm+h+sdr4nqKTOV/VFtneAA4sOHygDCOT04iLbw==
+"@react-native-community/cli-tools@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-tools/-/cli-tools-15.0.0.tgz#16a0f46dd0de0e72b5e4ff711d8bf4957390d44a"
+  integrity sha512-JZzHRJs+6F6or3tloXdbo6aSL2ifbvs7WKsEPjVFuXfaKNEzpQAqWAKMDr95VUEovuX942yD/QRLo6S2W5NTrw==
   dependencies:
     appdirsjs "^1.2.4"
     chalk "^4.1.2"
@@ -1636,25 +1618,25 @@
     shell-quote "^1.7.3"
     sudo-prompt "^9.0.0"
 
-"@react-native-community/cli-types@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli-types/-/cli-types-16.0.0.tgz#c303270dcdb6610da306f867873bd48ee68885bb"
-  integrity sha512-VestLfus39UIXHh3gahkTgujzaI/BFX2WVi/O7WVxGlN6mkx1uQNP9R3vTWRUfQpVocv0MhQg12ioX3wm6DoJg==
+"@react-native-community/cli-types@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli-types/-/cli-types-15.0.0.tgz#65497833df1e44764780acd8e88168f71f2394f7"
+  integrity sha512-sn+h6grsNxJFzKfOdzJX0HOIHbDnWiOo75+T4DBBdREfPTrq0Ao6NybxDWeircdMA6ovYrJLmjByls2MuCQMUA==
   dependencies:
     joi "^17.2.1"
 
-"@react-native-community/cli@^16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-16.0.0.tgz#d6a0cd90cc12f7a61cbec35b88ad643482d87406"
-  integrity sha512-tLJLQaKYpebVNFAXmHSAGct36gdYvckLXnxBHo6D5mhhfyZkyR6RvyLM6Uql/V3HXqa19ZZNPJeF1u/i4Abm6g==
+"@react-native-community/cli@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-15.0.0.tgz#003e10899fd77e583d3caa3eb038bfdf86b39788"
+  integrity sha512-IzDIFCoWZsoOHLSKcd8OX9gAXnbH83vsyBIFaj/X6praDUA4VCnDf41mGGSOT/VEarGlarTa3tvRcqZ8aE5l/A==
   dependencies:
-    "@react-native-community/cli-clean" "16.0.0"
-    "@react-native-community/cli-config" "16.0.0"
-    "@react-native-community/cli-debugger-ui" "16.0.0"
-    "@react-native-community/cli-doctor" "16.0.0"
-    "@react-native-community/cli-server-api" "16.0.0"
-    "@react-native-community/cli-tools" "16.0.0"
-    "@react-native-community/cli-types" "16.0.0"
+    "@react-native-community/cli-clean" "15.0.0"
+    "@react-native-community/cli-config" "15.0.0"
+    "@react-native-community/cli-debugger-ui" "15.0.0"
+    "@react-native-community/cli-doctor" "15.0.0"
+    "@react-native-community/cli-server-api" "15.0.0"
+    "@react-native-community/cli-tools" "15.0.0"
+    "@react-native-community/cli-types" "15.0.0"
     chalk "^4.1.2"
     commander "^9.4.1"
     deepmerge "^4.3.0"
@@ -6231,7 +6213,7 @@ react-devtools-core@^5.3.1:
     shell-quote "^1.6.1"
     ws "^7"
 
-react-dom@>=16.13.1:
+react-dom@>=16.13.1, react-dom@^19.0.0:
   version "19.0.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0.tgz#43446f1f01c65a4cd7f7588083e686a6726cfb57"
   integrity sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==
@@ -6405,10 +6387,12 @@ react-test-renderer@19.0.0:
     react-is "^19.0.0"
     scheduler "^0.25.0"
 
-react@19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0.tgz#6e1969251b9f108870aa4bff37a0ce9ddfaaabdd"
-  integrity sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==
+react@18.3.1:
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
+  integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
+  dependencies:
+    loose-envify "^1.1.0"
 
 reactotron-core-client@2.9.6:
   version "2.9.6"
