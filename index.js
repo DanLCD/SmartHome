@@ -1,6 +1,7 @@
 import { AppRegistry } from 'react-native';
-import SmartHomeApp from './src/SmartHomeApp';
+
 import { name as appName } from './app.json';
+import SmartHomeApp from './src/SmartHomeApp';
 
 if (__DEV__) {
 	import('@/reactotron.config');

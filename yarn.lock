@@ -6322,7 +6322,7 @@ react-native-web@>=0.13.4:
     postcss-value-parser "^4.2.0"
     styleq "^0.1.3"
 
-react-native@0.76.4:
+react-native@^0.76.4:
   version "0.76.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.76.4.tgz#28247a7622e601b07866dd663daf505869ce25ba"
   integrity sha512-c4K5dLmIAeeoGIxRM/Z2h9LjZVGDs8jwamksmFRSZFDt/j/A1wByVG/AnOpa6V39X40MQYSKEO0grKC7W5HpMQ==

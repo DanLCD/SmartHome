@@ -22,7 +22,7 @@ class MainApplication : Application(), ReactApplication {
               // add(MyReactNativePackage())
             }
 
-        override fun getJSMainModuleName(): String = "index"
+        override fun getJSMainModuleName(): String = "smarthomeapp"
 
         override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
 

@@ -130,6 +130,7 @@ dist
 .pnp.*
 
 .gradle
+.cxx
 **/build/
 !src/**/build/
 
