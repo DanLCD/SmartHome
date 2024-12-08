@@ -10,7 +10,7 @@ import { store, StoreContext } from '@/services/store';
 import './translations';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MMKV } from 'react-native-mmkv';
+//import { MMKV } from 'react-native-mmkv';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { setup } from '@/services/net';
 import { RootStackParamList } from './types/navigation';
@@ -18,8 +18,6 @@ import { RootStackParamList } from './types/navigation';
 const Stack = createStackNavigator<RootStackParamList>();
 
 export const queryClient = new QueryClient();
-
-export const storage = new MMKV();
 
 setup().catch(e => console.error(e));
 
@@ -41,9 +39,7 @@ const ApplicationNavigator = () => {
 const App = () => (
 	<Provider store={store} context={StoreContext}>
 		<QueryClientProvider client={queryClient}>
-			<ThemeProvider storage={storage}>
 				<ApplicationNavigator />
-			</ThemeProvider>
 		</QueryClientProvider>
 	</Provider>
 );

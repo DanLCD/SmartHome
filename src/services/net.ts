@@ -2,7 +2,7 @@ import { store } from '@/services/store';
 
 import BleManager from 'react-native-ble-manager';
 import { PERMISSIONS, RESULTS, request } from 'react-native-permissions';
-import { Alert, BackHandler } from 'react-native';
+import { Alert, BackHandler, NativeModules } from 'react-native';
 import PlacePayload from '@/types/payloads/PlacePayload';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 
@@ -12,6 +12,8 @@ export const NETWORK_CHARACTERISTIC_UUID = '51ff12bb-3ed8-46e5-b4f9-d64e2fec021b
 export const CONNECTED_CHARACTERISTIC_UUID = '28f2d950-79bd-5926-8872-648c716f231d';
 export const LAMP_CHARACTERISTIC_UUID = 'fb63904f-5d09-5c7b-8d2c-acb56a159a8f';
 export const MOTOR_CHARACTERISTIC_UUID = '4ce334f7-e255-5c56-a9ad-1e593f447a8c';
+
+throw NativeModules;
 
 const mainPlace: PlacePayload = {
     key: SERVICE_UUID,
@@ -53,14 +55,16 @@ async function connectToPeripheral(id: string) {
     await BleManager.connect(id, { autoconnect: true }).catch(error => store.dispatch({ type: 'DEVICE_CONNECTION_FAILED', id, error }));
 }
 
-BleManager.addListener('BleManagerDiscoverPeripheral', async ({ id }: { id: string }) => {
+
+
+BleManager.onDiscoverPeripheral(async ({ id }: { id: string }) => {
     let connections = await BleManager.getConnectedPeripherals();
     if (connections.length > 0) return;
     store.dispatch({ type: 'DEVICE_DISCOVERED', id });
     await connectToPeripheral(id);
 });
 
-BleManager.addListener('BleManagerConnectPeripheral', async ({ peripheral }: { peripheral: string }) => {
+BleManager.onConnectPeripheral(async ({ peripheral }: { peripheral: string }) => {
     await BleManager.stopScan();
 
     let service = await BleManager.retrieveServices(peripheral);
@@ -85,14 +89,14 @@ BleManager.addListener('BleManagerConnectPeripheral', async ({ peripheral }: { p
     console.log(service);
 });
 
-BleManager.addListener('BleManagerDisconnectPeripheral', async ({ peripheral }: { peripheral: string }) => {
+BleManager.onDisconnectPeripheral(async ({ peripheral }: { peripheral: string }) => {
     store.dispatch({ type: 'DEVICE_DISCONNECTED', id: peripheral });
     store.dispatch({ type: 'RESET_PLACES' });
     store.dispatch({ type: 'RESET_ACCESSORIES' });
     await BleManager.scan([SERVICE_UUID], 0);
 });
 
-BleManager.addListener('BleManagerDidUpdateValueForCharacteristic', ({ value, peripheral, characteristic, service }: { value: [], peripheral: string, characteristic: string, service: string }) => {
+BleManager.onDidUpdateValueForCharacteristic(({ value, peripheral, characteristic, service }: { value: [], peripheral: string, characteristic: string, service: string }) => {
 
 });
 

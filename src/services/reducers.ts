@@ -1,11 +1,11 @@
-import { AnyAction, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 import { StoreProps } from '@/services/store';
 import { Reducer } from '@reduxjs/toolkit';
 import PlacePayload from '@/types/payloads/PlacePayload';
 import AccessoryPayload from '@/types/payloads/AccessoryPayload';
 import DevicePayload from '@/types/payloads/DevicePayload';
 
-export function placesReducer(places: PlacePayload[] = [], action: AnyAction): PlacePayload[] {
+export function placesReducer(places: PlacePayload[] = [], action: any): PlacePayload[] {
     switch (action.type) {
         case 'UPDATE_PLACE':
             return places.concat(action.place);
@@ -25,7 +25,7 @@ export function placesReducer(places: PlacePayload[] = [], action: AnyAction): P
     return places;
 }
 
-export function accessoriesReducer(accessories: AccessoryPayload[] = [], action: AnyAction): AccessoryPayload[] {
+export function accessoriesReducer(accessories: AccessoryPayload[] = [], action: any): AccessoryPayload[] {
     switch (action.type) {
         case 'UPDATE_ACCESSORY_VALUE':
             return accessories.map(accessory => {
@@ -54,7 +54,7 @@ export function accessoriesReducer(accessories: AccessoryPayload[] = [], action:
     return accessories;
 }
 
-export function deviceReducer(device: DevicePayload | null = null, action: AnyAction): DevicePayload | null {
+export function deviceReducer(device: DevicePayload | null = null, action: any): DevicePayload | null {
     switch (action.type) {
         case 'DEVICE_DISCOVERED':
             return {id: action.id, connected: false};
@@ -67,7 +67,7 @@ export function deviceReducer(device: DevicePayload | null = null, action: AnyAc
     return device;
 }
 
-export const reducers = combineReducers<StoreProps>({
+export const reducers = combineReducers({
     places: placesReducer,
     accessories: accessoriesReducer,
     device: deviceReducer

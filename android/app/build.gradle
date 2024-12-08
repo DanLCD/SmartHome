@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.smarthomeapp"
+    namespace "com.smarthome"
     defaultConfig {
-        applicationId "com.smarthomeapp"
+        applicationId "com.smarthome"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

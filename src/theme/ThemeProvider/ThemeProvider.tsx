@@ -24,6 +24,8 @@ import { generateGutters } from '@/theme/gutters';
 import generateConfig from '@/theme/ThemeProvider/generateConfig';
 
 import type { MMKV } from 'react-native-mmkv';
+import { DefaultTheme } from '@react-navigation/native';
+import type { Theme as NativeTheme } from '@react-navigation/native';
 import type { ComponentTheme, Theme } from '@/types/theme/theme';
 import type {
 	FulfilledThemeConfiguration,
@@ -91,7 +93,8 @@ const ThemeProvider = ({ children = false, storage }: Props) => {
 		return {
 			dark: variant === 'dark',
 			colors: fullConfig.navigationColors,
-		};
+			fonts: DefaultTheme.fonts
+		} satisfies NativeTheme;
 	}, [variant, fullConfig.navigationColors]);
 
 	const theme = useMemo(() => {

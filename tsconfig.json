@@ -1,25 +1,12 @@
 {
-    "extends": "@react-native/typescript-config/tsconfig.json",
-    "compilerOptions": {
-        "types": [
-            "jest",
-            "node"
-        ],
-        "paths": {
-            "@/*": [
-                "./src/*"
-            ]
-        },
-        "allowImportingTsExtensions": false,
-        "module": "esnext",
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "include": [
-        "./src/**/*",
-        "index.d.ts",
-        ".eslintrc.js",
-        "jest.setup.js",
-        "jest.config.js",
-        "babel.config.js",
-        "index.js"
-    ],
+    "types": ["jest", "node"],
+    "module": "ESNext"
+  }
 }
